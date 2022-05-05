@@ -20,3 +20,14 @@ class Solution:
         #         if len(collections.Counter(word))<=maxLetters:
         #             counts[word]=1
         # return max(counts.values()) if len(counts)!=0 else 0
+
+        # Solution 3
+        # res = 0
+        # dic = collections.defaultdict(int)
+        # for i in range(len(s)-minSize+1):
+        #     tempStr = s[i:i+minSize]
+        #     mySet = set(tempStr)
+        #     if len(mySet) <= maxLetters:
+        #         dic[tempStr] += 1
+        #         res = max(res, dic[tempStr])        
+        # return res
